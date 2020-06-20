@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var comMove = ["r", "p", "s"];
+    for (var i = 0; i < 10; i++) {
+      var myMove = prompt("Choose r, p, or s");
+      var num = Math.floor(Math.random() * 3);
+      console.log(comMove[num]);
+
+        if (myMove === "r" && comMove[num] === "s") {
+            alert("You Win!");
+        }
+        else if (myMove === "r" && comMove[num] === "p") {
+            alert("You Lose!");
+        }
+        else if (myMove === "p" && comMove[num] === "r") {
+            alert("You Win!");
+        }
+        else if (myMove === "p" && comMove[num] === "s") {
+            alert("You Lose!");
+        }
+        else if (myMove === "s" && comMove[num] === "p") {
+            alert("You Win!");
+        }
+        else if (myMove === "s" && comMove[num] === "r") {
+            alert("You Lose!");
+        }
+        else if (myMove === comMove[num]) {
+            alert("You Tied!");
+        }
+    }
+
+  </script>
+
+</body>
+
+</html>
