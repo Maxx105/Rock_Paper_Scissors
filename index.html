@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Rock Paper Scissors</title>
 </head>
 
 <body>
 
   <script>
-    var comMove = ["r", "p", "s"];
+    var comMove = ["rock", "paper", "scissors"];
     for (var i = 0; i < 10; i++) {
-      var myMove = prompt("Choose r, p, or s");
+      var myMove = prompt("Choose rock, paper, or scissors");
       var num = Math.floor(Math.random() * 3);
-      console.log(comMove[num]);
+      alert("computer chose " + comMove[num]);
 
-        if (myMove === "r" && comMove[num] === "s") {
+        if (myMove === "rock" && comMove[num] === "scissors") {
             alert("You Win!");
         }
-        else if (myMove === "r" && comMove[num] === "p") {
+        else if (myMove === "rock" && comMove[num] === "paper") {
             alert("You Lose!");
         }
-        else if (myMove === "p" && comMove[num] === "r") {
+        else if (myMove === "paper" && comMove[num] === "rock") {
             alert("You Win!");
         }
-        else if (myMove === "p" && comMove[num] === "s") {
+        else if (myMove === "paper" && comMove[num] === "scissors") {
             alert("You Lose!");
         }
-        else if (myMove === "s" && comMove[num] === "p") {
+        else if (myMove === "scissors" && comMove[num] === "paper") {
             alert("You Win!");
         }
-        else if (myMove === "s" && comMove[num] === "r") {
+        else if (myMove === "scissors" && comMove[num] === "rock") {
             alert("You Lose!");
         }
         else if (myMove === comMove[num]) {
